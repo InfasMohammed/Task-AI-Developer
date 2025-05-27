@@ -12,9 +12,13 @@ Weekly_Sales: Target sales value
 
 # ⚙️ Tech Stack
 Django (Python Web Framework)
+
 Prophet (Forecasting library by Meta)
+
 Pandas & Matplotlib (Data handling and visualization)
+
 Joblib (Model serialization)
+
 HTML/CSS (Django Templates)
 
 # 🧪 Features
