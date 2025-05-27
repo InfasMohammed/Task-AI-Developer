@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Forecast</title>
+</head>
+<body>
+    <h1>Forecast Sales with Prophet</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <label for="horizon">Forecast next:</label>
+        <input type="number" name="horizon" min="1" max="52" value="{{ horizon|default:12 }}" required> weeks
+        <button type="submit">Generate Forecast</button>
+    </form>
+
+    {% if plot_path %}
+        <h2>Forecast Plot:</h2>
+        <img src="{% static plot_path %}" alt="Forecast">
+    {% endif %}
+
+    {% if csv_available %}
+        <br><br>
+        <a href="{% static 'forecast.csv' %}" download>
+            <button type="button">Download Forecast CSV</button>
+        </a>
+    {% endif %}
+</body>
+</html>
