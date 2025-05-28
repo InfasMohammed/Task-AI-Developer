@@ -13,6 +13,16 @@ Store, Dept: Identifiers
 
 Weekly_Sales: Target sales value
 
+## 📊 Model
+Model training and data preprocessing were performed in [this Colab notebook](https://colab.research.google.com/drive/151o-zjslCUb09JmHKCaYdeiU3b26imy5). It includes:
+
+- 📂 Dataset loading and initial inspection
+- 🧹 Handling missing and invalid dates
+- 🏪 Filtering for Store 1, Department 1 to create a focused time series
+- 📈 Prophet model training using weekly frequency
+- 💾 Exporting the trained model as a `.pkl` file for integration with the Django web app
+
+
 # ⚙️ Tech Stack
 Django (Python Web Framework)
 
