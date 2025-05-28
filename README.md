@@ -47,4 +47,5 @@ HTML/CSS (Django Templates)
 
 # Output 
 
-![image](https://github.com/user-attachments/assets/75024027-20d8-49d0-9f16-4d7c0da5aa1d)
+![image](https://github.com/user-attachments/assets/ababeffb-249d-4af9-a714-830e11cd09a2)
+
