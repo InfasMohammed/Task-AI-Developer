@@ -43,3 +43,8 @@ HTML/CSS (Django Templates)
    matplotlib
    joblib
 3. Run the Django Server : python manage.py runserver
+
+
+# Output 
+
+![image](https://github.com/user-attachments/assets/75024027-20d8-49d0-9f16-4d7c0da5aa1d)
