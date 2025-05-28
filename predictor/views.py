@@ -21,6 +21,14 @@ def home(request):
 
         # Save plot
         fig = model.plot(forecast)
+
+        # Draw a red line at the end of historical data
+        # Use the length of the model history to determine cutoff
+        cutoff_date = model.history['ds'].max()
+        plt.axvline(x=cutoff_date, color='red', linestyle='--', label='Forecast Start')
+        plt.legend()
+
+        # Final touches and save
         plt.title("Sales Forecast")
         plt.tight_layout()
         forecast_image_path = os.path.join('predictor', 'static', 'forecast.png')
@@ -28,12 +36,12 @@ def home(request):
         plt.close()
         plot_path = 'forecast.png'
 
-        # Save CSV
+        # Save forecast data as CSV
         csv_path = os.path.join('predictor', 'static', 'forecast.csv')
         forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].to_csv(csv_path, index=False)
         csv_available = True
 
-    # ⬇️ Pass horizon to the template so it remembers user input
+
     return render(request, 'predictor/home.html', {
         'plot_path': plot_path,
         'csv_available': csv_available,
